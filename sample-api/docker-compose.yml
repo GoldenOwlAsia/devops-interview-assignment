@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+    command: npm run start:prod
+    environment:
+      - PORT=3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/dist

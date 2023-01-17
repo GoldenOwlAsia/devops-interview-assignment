@@ -21,6 +21,7 @@ import { LoggingInterceptor } from './shared/logging.interceptor';
       database: 'sqlitedb',
       entities: [`${__dirname}/**/*.entity{.ts,.js}`],
       synchronize: true,
+      logging: true,
     }),
     AuthModule,
     UserModule,
